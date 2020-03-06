@@ -9,5 +9,12 @@ export const Variables = css`
     --color-second: #1DD1A1;
     --color-light: #FDFDFB;
     --color-dark: #272C4A;
+    --color-gray: #DFE6E9;
+    --background-color: rgba(223,230,233,0.45);
+    --font-content-family: 'Titillium Web', sans-serif;
+    --font-content-size: 13px;
+    --font-subtitle-family: 'Khand', sans-serif;
+    --font-icons-family: 'icon' !important;
+    --font-icons-size: 1.6em;
   }
 `
