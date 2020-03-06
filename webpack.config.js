@@ -9,6 +9,9 @@ module.exports = {
       template: 'src/index.html'
     })
   ],
+  devServer: {
+    host: '0.0.0.0'
+  },
   module: {
     rules: [
       {
@@ -20,6 +23,17 @@ module.exports = {
             presets: ['@babel/preset-env', '@babel/preset-react']
           }
         }
+      },
+      {
+        test: /\.(png|gif|jpg|svg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'assets/[hash].[ext]'
+            }
+          }
+        ]
       }
     ]
   }
