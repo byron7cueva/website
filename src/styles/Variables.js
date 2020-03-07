@@ -10,6 +10,7 @@ export const Variables = css`
     --color-light: #FDFDFB;
     --color-dark: #272C4A;
     --color-gray: #DFE6E9;
+    --color-gray-2: #CED6E0;
     --background-color: rgba(223,230,233,0.45);
     --font-content-family: 'Titillium Web', sans-serif;
     --font-content-size: 13px;

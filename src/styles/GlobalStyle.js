@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  html, body, section, figure, p, h2, h4, h5 {
+  html, body, section, figure, article, p, h2, h4, h5 {
     padding: 0;
     margin: 0;
   }
