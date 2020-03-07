@@ -3,6 +3,9 @@ import React from 'react'
 import { AboutSection, AboutContent, PhotoContainer } from './style'
 import photoImage from '../../assets/img/phone/photo.png'
 
+/**
+ * About me page
+ */
 export const About = () => (
   <AboutSection className='section-viewport'>
     <h2>Sobre mi</h2>

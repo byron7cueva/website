@@ -38,10 +38,11 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 1.9em;
     color: var(--color-first);
     font-weight: lighter;
-    padding-left: 25px;
+    margin-bottom: 0.5em;
+    padding-left: 1em;
     ::before {
       content: '';
-      width: 17px;
+      width: 0.8em;
       border-bottom: solid 0.13em;
       position: absolute;
       left: 0;
