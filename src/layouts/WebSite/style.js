@@ -6,7 +6,7 @@ import logo from '../../assets/img/all/logo.svg'
 import banner from '../../assets/img/all/banner.svg'
 
 const saturacionMask = css`
-  backdrop-filter: saturate(180%) blur(3px) drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+  backdrop-filter: saturate(100%) blur(4px);
   mask-repeat: no-repeat;
   mask-position: 100% 100%;
 `
@@ -26,7 +26,7 @@ export const Path = ({ width = '100%', height = '100%' }) => {
     position: absolute;
     mask-image: url(${pathLogo});
     mask-size: cover;
-    background-color: rgba(47,82,116,0.50);
+    background-color: rgba(47,82,116,0.75);
     z-index: 1;
     ${saturacionMask}
   `
@@ -51,7 +51,7 @@ export const Banner = styled.div`
   bottom:0;
   left:0;
   width: 100%;
-  height: 60px;
+  height: 55px;
   z-index: 1;
 `
 
@@ -64,7 +64,7 @@ export const BackgroundBanner = styled.div`
   mask-image: url(${banner});
   mask-size: cover;
   z-index: 2;
-  background: linear-gradient(30deg,rgba(25, 189, 140, 0.8) 0%,rgba(255, 255, 255, 0.49) 100%);
+  background: linear-gradient(30deg,rgba(29, 209, 161, 0.8) 0%,rgba(255, 255, 255, 0.4) 60%);
   ${saturacionMask}
 `
 
@@ -74,10 +74,11 @@ export const ContentBanner = styled.div`
   padding: 0.5em;
   p {
     margin: 0;
-    font-family: var(--font-subtitle);
+    font-family: var(--font-title-family);
+    font-weight: lighter;
   }
   p.icons {
-    margin-top: 0.5em;
+    margin-top: 0.3em;
   }
   a {
     color: var(--color-dark);
@@ -87,7 +88,7 @@ export const ContentBanner = styled.div`
 
 export const MenuButton = styled.a`
   position: fixed;
-  bottom: 7%;
+  bottom: 35px;
   right: 3%;
   display: flex;
   align-items: center;

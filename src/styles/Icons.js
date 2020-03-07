@@ -46,7 +46,7 @@ export const Icons = css`
   .icon-arrow_left:before {
     content: "\\e90a";
   }
-  .icon-arrow_carrot-down_alt2:before {
+  .icon-arrow_carrot-down:before {
     content: "\\e90b";
   }
 `
