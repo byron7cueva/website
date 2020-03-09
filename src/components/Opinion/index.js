@@ -8,7 +8,7 @@ export const Opinion = ({ message, writer, position, photo }) => (
       <span>{message}</span>
       <a href='#'> Ver más..</a>
     </p>
-    <button>
+    <button className='btn-icon'>
       <i className='icon-ondas' />
     </button>
     <div className='opinion__writer'>

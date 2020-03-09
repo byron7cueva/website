@@ -2,14 +2,15 @@ import styled, { css } from 'styled-components'
 
 const styleClass = css`
   button {
-    margin: 1em 0;
-    color: var(--color-gray-2);
-    border: none;
-    background: transparent;
-    outline: none;
+    display: block;
+    margin: 0 auto;
   }
 
-  .opinion__message span {
+  .opinion__message {
+    min-height: 13em;
+  }
+
+  .opinion__message span {    
     &:after, &:before {
       font-family: var(--font-icons-family);
       font-size: 1.5em;

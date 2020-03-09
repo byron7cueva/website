@@ -76,4 +76,12 @@ export const GlobalStyle = createGlobalStyle`
     align-items: center;
     justify-content: center;
   }
+
+  .btn-icon {
+    margin: 1em 0;
+    color: var(--color-gray-2);
+    border: none;
+    background: transparent;
+    outline: none;
+  }
 `
