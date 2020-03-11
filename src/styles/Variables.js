@@ -15,6 +15,7 @@ export const Variables = css`
     --font-content-family: 'Titillium Web', sans-serif;
     --font-content-size: 13px;
     --font-title-family: 'Khand', sans-serif;
+    --font-title-article-family: 'Fredoka One', sans-serif;
     --font-icons-family: 'icon' !important;
     --font-icons-size: 1.6em;
   }

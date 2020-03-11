@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import { OpinionsSection } from './style'
 import { Opinion } from '../../components/Opinion'
-import { useOpinionIndex } from '../../hooks/useOpinionIndex'
+import { useOpinionNavigation } from '../../hooks/useOpinionNavigation'
+import { useSpeech } from '../../hooks/useSpeech'
 
 import photoImage1 from '../../assets/img/all/soniaBossano.jpg'
 import photoImage2 from '../../assets/img/all/ernestoKruger.jpg'
@@ -22,11 +23,20 @@ export const Opinions = () => {
       photo: photoImage2
     }
   ]
-  const [opinion, index, next, prev, toIndex] = useOpinionIndex(opinions)
+  const [opinion, index, next, prev, toIndex] = useOpinionNavigation(opinions)
+  const [handleSpeech, stopSpeech] = useSpeech()
+
+  useEffect(() => {
+    stopSpeech()
+  }, [index])
+
+  const handleClickSpeech = () => {
+    handleSpeech(opinion.message)
+  }
   return (
     <OpinionsSection>
       <h2>Que dicen de mi trabajo</h2>
-      <Opinion {...opinion} />
+      <Opinion {...opinion} onSpeech={handleClickSpeech} />
       <div className='opinions__navigation'>
         <button className='btn-icon' onClick={prev}>
           <i className='icon-arrow_left' />

@@ -39,6 +39,7 @@ export const GlobalStyle = createGlobalStyle`
     color: var(--color-first);
     font-weight: lighter;
     margin-bottom: 0.5em;
+    margin-left: 2.3em;
     padding-left: 1em;
     ::before {
       content: '';
@@ -48,6 +49,12 @@ export const GlobalStyle = createGlobalStyle`
       left: 0;
       top: 50%;
     }
+  }
+
+  h3 {
+    font-family: var(--font-title-article-family);
+    font-size: 1.4em;
+    font-weight: normal;
   }
 
   h4 {
@@ -71,6 +78,10 @@ export const GlobalStyle = createGlobalStyle`
     height: 100vh;
   }
 
+  .section-container {
+    padding: 1.5em;
+  }
+
   .flex-center {
     display: flex;
     align-items: center;
@@ -83,5 +94,6 @@ export const GlobalStyle = createGlobalStyle`
     border: none;
     background: transparent;
     outline: none;
+    cursor: pointer;
   }
 `

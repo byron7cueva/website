@@ -1,6 +1,10 @@
 import { useState } from 'react'
 
-export function useOpinionIndex (opinions) {
+/**
+ * Hook for navigation of opinions
+ * @param {*} opinions
+ */
+export function useOpinionNavigation (opinions) {
   const [index, setIndex] = useState(0)
   let opinion = opinions[index]
 

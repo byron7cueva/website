@@ -15,8 +15,9 @@ export const LogoContainer = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  width: 79px;
-  height: 80px;
+  width: 69px;
+  height: 70px;
+  z-index: 2;
 `
 
 export const Path = ({ width = '100%', height = '100%' }) => {
@@ -27,7 +28,6 @@ export const Path = ({ width = '100%', height = '100%' }) => {
     mask-image: url(${pathLogo});
     mask-size: cover;
     background-color: rgba(47,82,116,0.75);
-    z-index: 1;
     ${saturacionMask}
   `
   return <Div />
@@ -36,14 +36,14 @@ export const Path = ({ width = '100%', height = '100%' }) => {
 export const Logo = styled.div`
   width: 40px;
   height: 40px;
-  top: 15%;
-  left: 10%;
+  top: 10%;
+  left: 5%;
   background-image: url(${logo});
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   position: absolute;
-  z-index: 2;
+  z-index: 3;
 `
 
 export const Banner = styled.div`
@@ -52,7 +52,7 @@ export const Banner = styled.div`
   left:0;
   width: 100%;
   height: 55px;
-  z-index: 1;
+  z-index: 2;
 `
 
 export const BackgroundBanner = styled.div`
@@ -63,14 +63,14 @@ export const BackgroundBanner = styled.div`
   left: 0;
   mask-image: url(${banner});
   mask-size: cover;
-  z-index: 2;
+  z-index: 3;
   background: linear-gradient(30deg,rgba(29, 209, 161, 0.8) 0%,rgba(255, 255, 255, 0.4) 60%);
   ${saturacionMask}
 `
 
 export const ContentBanner = styled.div`
   position: absolute;
-  z-index:3;
+  z-index: 4;
   padding: 0.5em;
   p {
     margin: 0;
