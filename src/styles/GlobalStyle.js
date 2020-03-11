@@ -96,4 +96,10 @@ export const GlobalStyle = createGlobalStyle`
     outline: none;
     cursor: pointer;
   }
+
+  .chart {
+    width: 100%;
+    height: 50vh;
+    padding: 0 1em;
+  }
 `
