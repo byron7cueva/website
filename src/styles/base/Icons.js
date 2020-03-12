@@ -22,6 +22,9 @@ export const Icons = css`
   .icon-ondas:before {
     content: "\\e901";
   }
+  .icon-mail:before {
+    content: "\\e90c";
+  }
   .icon-github:before {
     content: "\\e902";
   }

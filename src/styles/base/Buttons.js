@@ -10,6 +10,10 @@ const buttonBase = css`
  * Styles for Buttons
  */
 export const Buttons = css`
+  button, a {
+    -webkit-tap-highlight-color: transparent;
+  }
+
   .btn-icon {
     ${buttonBase}
     margin: 1em 0;
@@ -26,7 +30,7 @@ export const Buttons = css`
     transition-property: background;
     transition-duration: 0.2;
     transition-timing-function: ease-out;
-    color: var(--color-text-alternative);
+    color: var(--color-dark);
     border-radius: 24px;
     background: linear-gradient(278deg, var(--color-alternative), var(--color-first));
     opacity: 0.8;
