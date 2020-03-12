@@ -2,45 +2,38 @@ import React from 'react'
 import { ResponsiveBar } from '@nivo/bar'
 
 import { ChartContainer } from '../../containers/ChartContainer'
-import { barConfig, formatSkills } from '../../settings/charts'
 import { colors } from '../../settings/constants'
+import { barConfig, formatSkills } from '../../settings/charts'
 
 const BarComponent = props => {
   return (
     <g transform={`translate(${props.x},${props.y})`}>
       <rect width={props.width} height={props.height} fill={props.color} />
       <text
-        x={props.width - 16}
+        x={props.width / 2}
         y={props.height / 2}
-        textAnchor='end'
+        textAnchor='middle'
         dominantBaseline='central'
         fill={colors.light}
         style={{
           fontSize: 13
         }}
       >
-        {props.data.indexValue}
+        {formatSkills(props.data.value)}
       </text>
     </g>
   )
 }
 
-export const LanguagesChart = ({ data = [], height }) => (
-  <ChartContainer title='Languajes y plataformas' height={height}>
+export const DataTecnologyChart = ({ data, height, width }) => (
+  <ChartContainer title='Tecnologías de Datos' height={height} width={width}>
     <ResponsiveBar
       {...barConfig}
+      margin={{ top: 10, right: 0, bottom: 30, left: 70 }}
       height={height}
       data={data}
-      layout='horizontal'
-      margin={{ top: 20, right: 30, bottom: 30, left: 0 }}
-      colors={[colors.orange, colors.greenDark, colors.blueLight, colors.coral]}
-      enableGridX
-      enableGridY={false}
-      axisLeft={null}
-      axisTop={{
-        format: formatSkills
-      }}
-      axisBottom={{
+      colors={[colors.fuchsia, colors.orange, colors.blueLight, colors.coral, colors.greenDark]}
+      axisLeft={{
         format: formatSkills
       }}
       barComponent={BarComponent}

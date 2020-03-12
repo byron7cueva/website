@@ -2,51 +2,8 @@ import React from 'react'
 import { ResponsiveBump } from '@nivo/bump'
 
 import { ChartContainer } from '../../containers/ChartContainer'
-import { theme } from '../../settings/charts'
+import { theme, formatSkills } from '../../settings/charts'
 import { colors } from '../../settings/constants'
-
-const data = [
-  {
-    id: 'React.js',
-    data: [
-      { x: 2016, y: null },
-      { x: 2017, y: null },
-      { x: 2018, y: null },
-      { x: 2019, y: 1, use: 'Básico' },
-      { x: 2020, y: 1, use: 'Intermedio' }
-    ]
-  },
-  {
-    id: 'Vue.js',
-    data: [
-      { x: 2016, y: null },
-      { x: 2017, y: null },
-      { x: 2018, y: 2, use: 'Aprendiz' },
-      { x: 2019, y: 2, use: 'Básico' },
-      { x: 2020, y: 2, use: 'Intermedio' }
-    ]
-  },
-  {
-    id: 'Angular.js',
-    data: [
-      { x: 2016, y: 1, use: 'Intermedio' },
-      { x: 2017, y: 1, use: 'Avanzado' },
-      { x: 2018, y: 4, use: 'Descartado' },
-      { x: 2019, y: 4, use: 'Descartado' },
-      { x: 2020, y: 4, use: 'Descartado' }
-    ]
-  },
-  {
-    id: 'Angular',
-    data: [
-      { x: 2016, y: null },
-      { x: 2017, y: null },
-      { x: 2018, y: 2, use: 'Aprendiz' },
-      { x: 2019, y: 3, use: 'Básico' },
-      { x: 2020, y: 3, use: 'Básico' }
-    ]
-  }
-]
 
 const CustomPoint = ({ x, y, size, borderColor, borderWidth, data, isInactive }) => {
   return (
@@ -59,29 +16,54 @@ const CustomPoint = ({ x, y, size, borderColor, borderWidth, data, isInactive })
       />
       {!isInactive &&
         <text textAnchor='middle' y={4} fill={borderColor} style={{ fontSize: 9 }}>
-          {data.use}
+          {formatSkills(data.value)}
         </text>}
     </g>
   )
 }
 
-export const FrontendChart = ({ height }) => (
-  <ChartContainer title='Tecnologias Frontend' height={height}>
+export const FrontendChart = ({ data, height, width }) => (
+  <ChartContainer title='Tecnologias Frontend' height={height} width={width}>
     <ResponsiveBump
       height={height}
       data={data}
       pointComponent={CustomPoint}
-      margin={{ top: 20, right: 75, bottom: 25, left: 0 }}
+      margin={{ top: 20, right: 150, bottom: 25, left: 150 }}
       lineWidth={4}
       activeLineWidth={5}
       inactiveLineWidth={3}
-      enableGridY={false}
       axisTop={{ tickSize: 0, tickPadding: 9 }}
       axisBottom={{ tickSize: 0, tickPadding: 9 }}
-      axisLeft={null}
-      axisRight={null}
-      startLabelPadding={20}
-      endLabelPadding={20}
+      axisLeft={{
+        tickSize: 80,
+        tickPadding: 0,
+        legend: 'Prioridad de uso',
+        legendPosition: 'middle',
+        legendOffset: -140,
+        format: d => {
+          switch (d) {
+            case 1: return 'Principal'
+            case 4: return 'Sin uso'
+            default: return d
+          }
+        }
+      }}
+      axisRight={{
+        tickSize: 80,
+        tickPadding: 0,
+        legend: 'Prioridad de uso',
+        legendPosition: 'middle',
+        legendOffset: 140,
+        format: d => {
+          switch (d) {
+            case 1: return 'Principal'
+            case 4: return 'Sin uso'
+            default: return d
+          }
+        }
+      }}
+      startLabelPadding={10}
+      endLabelPadding={10}
       pointSize={24}
       pointBorderWidth={3}
       pointBorderColor={{ from: 'serie.color' }}
@@ -89,8 +71,9 @@ export const FrontendChart = ({ height }) => (
       activePointBorderWidth={4}
       inactivePointSize={0}
       inactivePointBorderWidth={2}
-      colors={[colors.blueLight, colors.greenLight, colors.fuchsia, colors.coral]}
+      colors={[colors.blueLight, colors.greenLight, colors.orange, colors.coral]}
       theme={theme}
+      startLabel={d => (d.id)}
     />
   </ChartContainer>
 )

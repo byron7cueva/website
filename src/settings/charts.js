@@ -9,6 +9,13 @@ export const theme = {
         fontSize: size.textContent,
         fontFamily: fonts.content
       }
+    },
+    legend: {
+      text: {
+        fill: colors.gray,
+        fontSize: size.textContent,
+        fontFamily: fonts.content
+      }
     }
   },
   grid: {
@@ -31,5 +38,20 @@ export const theme = {
       fontFamily: fonts.content,
       textShadow: '0px 2px 3px rgba(0,0,0,0.35)'
     }
+  }
+}
+
+export const barConfig = {
+  theme,
+  colorBy: 'indexValue'
+}
+
+export const formatSkills = d => {
+  switch (d) {
+    case 1: return 'Aprendiz'
+    case 2: return 'Básico'
+    case 3: return 'Intermedio'
+    case 4: return 'Avanzado'
+    case 5: return 'Experto'
   }
 }
