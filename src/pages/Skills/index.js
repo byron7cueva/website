@@ -1,10 +1,13 @@
 import React from 'react'
 
-import { Languages } from '../../components/Languages'
+import { SkillsSection } from './style'
+import { LanguagesChart } from '../../components/LanguagesChart'
+import { FrontendChart } from '../../components/FrontendChart'
 
 export const Skills = () => (
-  <section>
+  <SkillsSection>
     <h2>Habilidades</h2>
-    <Languages />
-  </section>
+    <LanguagesChart />
+    <FrontendChart />
+  </SkillsSection>
 )

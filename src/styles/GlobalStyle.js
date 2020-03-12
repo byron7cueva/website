@@ -1,77 +1,22 @@
 import { createGlobalStyle } from 'styled-components'
 
-import { Variables } from './Variables'
-import { Fonts } from './Fonts'
-import { Icons } from './Icons'
+import { Fonts } from './settings/Fonts'
+import { Variables } from './settings/Variables'
+import { Defaults } from './settings/Defaults'
+import { Icons } from './base/Icons'
+import { Titles } from './base/Titles'
+import { Buttons } from './base/Buttons'
 
+/**
+ * Global styles
+ */
 export const GlobalStyle = createGlobalStyle`
   ${Fonts}
   ${Variables}
+  ${Defaults}
   ${Icons}
-
-  * {
-    box-sizing: border-box;
-  }
-
-  html, body, section, figure, article, p, h2, h4, h5 {
-    padding: 0;
-    margin: 0;
-  }
-
-  body {
-    color: var(--color-dark);
-    background-color: var(--background-color);
-    font-family: var(--font-content-family);
-    font-size: var(--font-content-size);
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-  h1, h2, h3, h4, h5 {
-    font-family: var(--font-title-family);
-  }
-
-  h2 {
-    position: relative;
-    font-size: 1.9em;
-    color: var(--color-first);
-    font-weight: lighter;
-    margin-bottom: 0.5em;
-    margin-left: 2.3em;
-    padding-left: 1em;
-    ::before {
-      content: '';
-      width: 0.8em;
-      border-bottom: solid 0.13em;
-      position: absolute;
-      left: 0;
-      top: 50%;
-    }
-  }
-
-  h3 {
-    font-family: var(--font-title-article-family);
-    font-size: 1.4em;
-    font-weight: normal;
-  }
-
-  h4 {
-    color: var(--color-light);
-    font-size: 1.5em;
-    font-weight: normal;
-  }
-
-  h5 {
-    color: var(--color-second);
-    font-size: 1.3em;
-    font-weight: lighter;
-  }
-
-  p {
-    font-weight: lighter;
-  }
+  ${Titles}
+  ${Buttons}
 
   .section-viewport {
     width: 100%;
@@ -88,18 +33,8 @@ export const GlobalStyle = createGlobalStyle`
     justify-content: center;
   }
 
-  .btn-icon {
-    margin: 1em 0;
-    color: var(--color-gray-2);
-    border: none;
-    background: transparent;
-    outline: none;
-    cursor: pointer;
-  }
-
   .chart {
     width: 100%;
-    height: 50vh;
-    padding: 0 1em;
+    height: 200px;
   }
 `

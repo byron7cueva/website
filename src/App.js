@@ -7,6 +7,7 @@ import { About } from './pages/About'
 import { Opinions } from './pages/Opinions'
 import { Experiences } from './pages/Experiences'
 import { Skills } from './pages/Skills'
+import { Contact } from './pages/Contact'
 
 /**
  * Instance of application
@@ -16,11 +17,12 @@ export const App = () => (
   <BrowserRouter>
     <WebSite>
       <Switch>
-        <Route path='/' exact component={Skills} />
+        <Route path='/' exact component={Home} />
         <Route path='/about' exact component={About} />
         <Route path='/opinions' exact component={Opinions} />
         <Route path='/experience' exact component={Experiences} />
-        <Route path='/skills' exact component={Home} />
+        <Route path='/skills' exact component={Skills} />
+        <Route path='/contact' exact component={Contact} />
       </Switch>
     </WebSite>
   </BrowserRouter>

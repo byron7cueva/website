@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "@nivo/bar": "^0.61.1",
+    "@nivo/bump": "^0.61.1",
     "intersection-observer": "^0.7.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",

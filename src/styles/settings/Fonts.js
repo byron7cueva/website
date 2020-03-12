@@ -1,10 +1,13 @@
 import { css } from 'styled-components'
 
-import iconEot from '../assets/font/icon.eot'
-import iconSvg from '../assets/font/icon.svg'
-import iconTtf from '../assets/font/icon.ttf'
-import iconWoff from '../assets/font/icon.woff'
+import iconEot from '../../assets/font/icon.eot'
+import iconSvg from '../../assets/font/icon.svg'
+import iconTtf from '../../assets/font/icon.ttf'
+import iconWoff from '../../assets/font/icon.woff'
 
+/**
+ * Fonst definition
+ */
 export const Fonts = css`
   @font-face {
     font-family: 'icon';

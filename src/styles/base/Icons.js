@@ -1,5 +1,8 @@
 import { css } from 'styled-components'
 
+/**
+ * Styles for icons
+ */
 export const Icons = css`
   [class^="icon-"], [class*=" icon-"] {
     font-family: var(--font-icons-family);

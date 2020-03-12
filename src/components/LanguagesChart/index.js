@@ -29,11 +29,11 @@ const BarComponent = props => {
   )
 }
 
-export const Languages = () => (
+export const LanguagesChart = () => (
   <article className='chart'>
-    <h3>Languajes</h3>
+    <h3>Languajes y plataformas</h3>
     <ResponsiveBar
-      height={150}
+      height={100}
       data={data}
       keys={['value']}
       indexBy='id'

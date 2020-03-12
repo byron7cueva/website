@@ -22,7 +22,7 @@ export const Home = () => {
       <Particles params={config} className='home__particles' />
       <HomeContainer>
         <div>
-          <h4>SOY</h4>
+          <h6>SOY</h6>
           <img src={nameSvg} />
           <h5>Full Stack Developer</h5>
         </div>
