@@ -10,7 +10,7 @@ export const Titles = css`
 
   h2 {
     position: relative;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
     margin-left: 2.3em;
     padding-left: 1em;
     font-size: 1.9em;

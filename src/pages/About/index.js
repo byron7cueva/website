@@ -7,7 +7,7 @@ import photoImage from '../../assets/img/phone/photo.png'
  * About me page
  */
 export const About = () => (
-  <AboutSection className='section-viewport'>
+  <AboutSection className='container-page'>
     <h2>Sobre mi</h2>
     <AboutContent>
       <p>

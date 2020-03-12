@@ -5,4 +5,7 @@ export const Containers = css`
     width: 100%;
     height: 100vh;
   }
+  .container-page {
+    padding: 1em 1.5em;
+  }
 `
