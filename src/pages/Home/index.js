@@ -18,7 +18,7 @@ export const Home = () => {
   }
 
   return (
-    <HomeSection className='section-viewport'>
+    <HomeSection className='container-viewport'>
       <Particles params={config} className='home__particles' />
       <HomeContainer>
         <div>

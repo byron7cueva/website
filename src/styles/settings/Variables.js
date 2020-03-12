@@ -18,7 +18,7 @@ export const Variables = css`
     --color-background-light: rgba(223,230,233,0.45);
 
     /* Color text */
-    --color-text-alternative: #204A7B;
+    --color-text-alternative: #31547c;
 
     /* Fonts */
     --font-content-family: 'Titillium Web', sans-serif;

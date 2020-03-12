@@ -6,6 +6,7 @@ import { Defaults } from './settings/Defaults'
 import { Icons } from './base/Icons'
 import { Titles } from './base/Titles'
 import { Buttons } from './base/Buttons'
+import { Containers } from './base/Containers'
 
 /**
  * Global styles
@@ -17,11 +18,7 @@ export const GlobalStyle = createGlobalStyle`
   ${Icons}
   ${Titles}
   ${Buttons}
-
-  .section-viewport {
-    width: 100%;
-    height: 100vh;
-  }
+  ${Containers}
 
   .section-container {
     padding: 1.5em;
