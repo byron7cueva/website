@@ -76,6 +76,7 @@ export const ContentBanner = styled.div`
     margin: 0;
     font-family: var(--font-title-family);
     font-weight: lighter;
+    line-height: 1.2em;
   }
   p.icons {
     margin-top: 0.3em;

@@ -1,37 +1,39 @@
 import { css } from 'styled-components'
 
+import { fonts, colors, size } from '../../settings/constants'
+
 /**
  * Variables for style default
  */
 export const Variables = css`
   :root {
     /* Colors */
-    --color-first: #1E85E6;
-    --color-second: #1DD1A1;
-    --color-alternative: #11BBD1;
-    --color-light: #FDFDFB;
-    --color-dark: #272C4A;
-    --color-gray: #DFE6E9;
-    --color-gray-2: #CED6E0;
+    --color-first: ${colors.first};
+    --color-second: ${colors.second};
+    --color-alternative: ${colors.alternative};
+    --color-light: ${colors.light};
+    --color-dark: ${colors.dark};
+    --color-gray: ${colors.gray};
+    --color-gray-2: ${colors.gray2};
 
     /* Color for backgrouns  */
     --color-background-light: rgba(223,230,233,0.45);
 
     /* Color text */
-    --color-text-alternative: #31547c;
+    --color-text-alternative: ${colors.grayDark};
 
     /* Fonts */
-    --font-content-family: 'Titillium Web', sans-serif;
-    --font-content-size: 13px;
+    --font-content-family: ${fonts.content}, sans-serif;
+    --font-content-size: ${size.textContent};
 
-    --font-title-family: 'Khand', sans-serif;
-    --font-title-article-family: 'Fredoka One', sans-serif;
+    --font-title-family: ${fonts.title}, sans-serif;
+    --font-title-article-family: ${fonts.titleArticle}, sans-serif;
     
-    --font-icons-family: 'icon';
-    --font-icons-size: 1.6em;
-    --font-icon-btn-size: 2em;
+    --font-icons-family: ${fonts.icons};
+    --font-icons-size: ${size.icon};
+    --font-icon-btn-size:${size.iconBtn};
 
     /* Text */
-    --line-height-content: 2em;
+    --line-height-content: ${size.lineHeightContent};
   }
 `

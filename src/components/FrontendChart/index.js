@@ -1,5 +1,7 @@
 import React from 'react'
 import { ResponsiveBump } from '@nivo/bump'
+import { theme } from '../../settings/charts'
+import { colors } from '../../settings/constants'
 
 const data = [
   {
@@ -49,7 +51,7 @@ const CustomPoint = ({ x, y, size, borderColor, borderWidth, data, isInactive })
     <g transform={`translate(${x}, ${y})`} style={{ pointerEvents: 'none' }}>
       <circle
         r={size}
-        fill='#272C4A'
+        fill={colors.grayDark}
         stroke={borderColor}
         strokeWidth={borderWidth}
       />
@@ -68,7 +70,7 @@ export const FrontendChart = () => (
       height={400}
       data={data}
       pointComponent={CustomPoint}
-      margin={{ top: 20, right: 70, bottom: 100, left: 0 }}
+      margin={{ top: 20, right: 75, bottom: 100, left: 0 }}
       lineWidth={4}
       activeLineWidth={5}
       inactiveLineWidth={3}
@@ -86,28 +88,8 @@ export const FrontendChart = () => (
       activePointBorderWidth={4}
       inactivePointSize={0}
       inactivePointBorderWidth={2}
-      colors={['#1ea0f2', '#41c7c7', '#fbf34c', '#F649A7', '#FE6A6A', '#85EBA2', '#3ABBB3', '#EF8D33']}
-      theme={{
-        axis: {
-          ticks: {
-            line: { fill: '#e0e4e4' },
-            text: {
-              fill: '#e0e4e4',
-              fontSize: 12,
-              fontFamily: 'Titillium Web'
-            }
-          }
-        },
-        grid: {
-          line: { stroke: '#cecdcc', strokeDasharray: '1 2', strokeOpacity: 0.4 }
-        },
-        tooltip: {
-          container: { background: '#e0e4e4', color: '#273aa2', fontSize: 14, borderRadius: 0, boxShadow: '9px 9px 0 rgba(0, 0, 0, 0.15)' }
-        },
-        labels: {
-          text: { fill: '#1a1f35', fontSize: 12, fontWeight: 500, fontFamily: 'Titillium Web', textShadow: '0px 2px 3px rgba(0,0,0,0.35)' }
-        }
-      }}
+      colors={[colors.blueLight, colors.greenLight, colors.fuchsia, colors.coral]}
+      theme={theme}
     />
   </article>
 )

@@ -1,13 +1,8 @@
 import React from 'react'
 
 import { ResponsiveBar } from '@nivo/bar'
-
-const data = [
-  { id: 'Java', value: 3 },
-  { id: 'Kotlin', value: 2 },
-  { id: 'JavaScript', value: 4 },
-  { id: 'Node.js', value: 4 }
-]
+import { theme } from '../../settings/charts'
+import { colors } from '../../settings/constants'
 
 const BarComponent = props => {
   return (
@@ -18,7 +13,7 @@ const BarComponent = props => {
         y={props.height / 2}
         textAnchor='end'
         dominantBaseline='central'
-        fill='black'
+        fill={colors.light}
         style={{
           fontSize: 13
         }}
@@ -29,17 +24,18 @@ const BarComponent = props => {
   )
 }
 
-export const LanguagesChart = () => (
+export const LanguagesChart = ({ data = [] }) => (
   <article className='chart'>
     <h3>Languajes y plataformas</h3>
     <ResponsiveBar
-      height={100}
+      height={150}
       data={data}
       keys={['value']}
       indexBy='id'
       layout='horizontal'
-      margin={{ top: 20, right: 25, bottom: 0, left: 0 }}
+      margin={{ top: 20, right: 30, bottom: 0, left: 0 }}
       colorBy='indexValue'
+      colors={[colors.orange, colors.greenDark, colors.blueLight, colors.coral]}
       enableGridX
       enableGridY={false}
       axisBottom={null}
@@ -56,6 +52,7 @@ export const LanguagesChart = () => (
         }
       }}
       barComponent={BarComponent}
+      theme={theme}
     />
   </article>
 )

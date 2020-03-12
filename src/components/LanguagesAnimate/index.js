@@ -1,51 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Bar } from '@nivo/bar'
 
-const data = {
-  2014: [
-    { id: 'JavaScript', value: 2 },
-    { id: 'Node.js', value: 1 },
-    { id: 'Java', value: 2 },
-    { id: 'PHP', value: 4 }
-  ],
-  2015: [
-    { id: 'JavaScript', value: 3 },
-    { id: 'Node.js', value: 2 },
-    { id: 'Java', value: 2 },
-    { id: 'PHP', value: 3 }
-  ],
-  2016: [
-    { id: 'JavaScript', value: 3 },
-    { id: 'Node.js', value: 3 },
-    { id: 'Java', value: 3 },
-    { id: 'PHP', value: 2 }
-  ],
-  2017: [
-    { id: 'JavaScript', value: 4 },
-    { id: 'Node.js', value: 4 },
-    { id: 'Java', value: 4 },
-    { id: 'PHP', value: 1 }
-  ],
-  2018: [
-    { id: 'JavaScript', value: 4 },
-    { id: 'Node.js', value: 4 },
-    { id: 'Java', value: 3 }
-  ],
-  2019: [
-    { id: 'JavaScript', value: 4 },
-    { id: 'Node.js', value: 4 },
-    { id: 'Java', value: 3 },
-    { id: 'Kotlin', value: 1 }
-  ],
-  2020: [
-    { id: 'JavaScript', value: 4 },
-    { id: 'Node.js', value: 4 },
-    { id: 'Java', value: 3 },
-    { id: 'Kotlin', value: 2 }
-  ]
-}
-
-const DataGenerator = (initialIndex) => {
+const DataGenerator = (initialIndex, data) => {
   let index = initialIndex
   let state = data[initialIndex]
 
@@ -83,9 +39,8 @@ const BarComponent = props => {
   )
 }
 
-const dataGenerator = DataGenerator(2014)
-
-export const Languages = () => {
+export const Languages = ({ data = [] }) => {
+  const dataGenerator = DataGenerator(2014, data)
   const [current, setCurrent] = useState(0)
   useEffect(() => {
     const timer = setTimeout(() => {

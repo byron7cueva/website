@@ -24,6 +24,15 @@ export const Titles = css`
       content: '';
       border-bottom: solid 0.13em;
     }
+    &.dark {
+      color: var(--color-second);
+    }
+  }
+
+  h3 {
+    color: var(--color-light);
+    font-weight: lighter;
+    font-size: 1.5em;
   }
 
   h4 {

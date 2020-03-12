@@ -7,7 +7,9 @@ import { useSpeech } from '../../hooks/useSpeech'
 
 import photoImage1 from '../../assets/img/all/soniaBossano.jpg'
 import photoImage2 from '../../assets/img/all/ernestoKruger.jpg'
-
+/**
+ * Opinions Page
+ */
 export const Opinions = () => {
   const opinions = [
     {
