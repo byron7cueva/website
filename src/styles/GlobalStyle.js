@@ -7,6 +7,7 @@ import { Icons } from './base/Icons'
 import { Titles } from './base/Titles'
 import { Buttons } from './base/Buttons'
 import { Containers } from './base/Containers'
+import { Inputs } from './base/Inputs'
 
 /**
  * Global styles
@@ -19,4 +20,5 @@ export const GlobalStyle = createGlobalStyle`
   ${Titles}
   ${Buttons}
   ${Containers}
+  ${Inputs}
 `

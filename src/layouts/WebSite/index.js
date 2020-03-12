@@ -25,7 +25,7 @@ export const WebSite = ({ children }) => (
     <Banner>
       <BackgroundBanner />
       <ContentBanner>
-        <p>byron7cueva@gmail.com</p>
+        <p>2020 - Byron Cueva</p>
         <p className='icons'>
           <a href='https://www.linkedin.com/in/byron7cueva/' className='icon-linkedin' target='noopener noreferrer' />
           <a href='https://github.com/byron7cueva' className='icon-github' target='noopener noreferrer' />

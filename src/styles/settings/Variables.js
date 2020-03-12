@@ -15,6 +15,7 @@ export const Variables = css`
     --color-dark: ${colors.dark};
     --color-gray: ${colors.gray};
     --color-gray-2: ${colors.gray2};
+    --color-gray-4: ${colors.gray4};
 
     /* Color for backgrouns  */
     --color-background-light: rgba(223,230,233,0.45);
