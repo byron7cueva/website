@@ -8,4 +8,8 @@ export const Containers = css`
   .container-page {
     padding: 1em 1.5em;
   }
+  .container-center {
+    display: block;
+    margin: 0 auto;
+  }
 `

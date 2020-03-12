@@ -1,13 +1,9 @@
 import styled, { css } from 'styled-components'
 
 const styleClass = css`
-  button {
-    display: block;
-    margin: 0 auto;
-  }
-
   .opinion__message {
     min-height: 13em;
+    margin-bottom: 1em;
   }
 
   .opinion__message span {    
@@ -22,16 +18,17 @@ const styleClass = css`
     }
   }
   .opinion__writer {
-    width: 90%;
     display: inline-flex;
+    width: 90%;
+    margin: 1em 0;
     img {
       width: 4em;
       border-radius: 50%;
     }
     div {
+      text-align: left;
       margin-left: 1em;
       font-size: 0.9em;
-      text-align: left;
     }
   }
 `

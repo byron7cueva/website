@@ -12,7 +12,7 @@ export const Titles = css`
     position: relative;
     margin-bottom: 1em;
     margin-left: 2.3em;
-    padding-left: 1em;
+    padding-left: 1.2em;
     font-size: 1.9em;
     font-weight: lighter;
     color: var(--color-first);

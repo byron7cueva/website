@@ -2,12 +2,12 @@ import React from 'react'
 
 import { OpinionContainer } from './style'
 
-export const Opinion = ({ message, writer, position, photo, onSpeech }) => {
+export const Opinion = ({ message, writer, position, photo, onSpeech, link }) => {
   return (
     <OpinionContainer>
       <p className='opinion__message'>
         <span>{message}</span>
-        <a href='#'> Ver más..</a>
+        <a href={link} target='noopener noreferrer'> Ver más..</a>
       </p>
       <button className='btn-icon' onClick={onSpeech}>
         <i className='icon-ondas' />

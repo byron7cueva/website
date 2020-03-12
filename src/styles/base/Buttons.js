@@ -15,6 +15,9 @@ export const Buttons = css`
     margin: 1em 0;
     color: var(--color-gray-2);
     background: transparent;
+    i {
+      font-size: var(--font-icon-btn-size);
+    }
   }
 
   .btn {

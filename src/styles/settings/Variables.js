@@ -29,5 +29,6 @@ export const Variables = css`
     
     --font-icons-family: 'icon';
     --font-icons-size: 1.6em;
+    --font-icon-btn-size: 2em;
   }
 `
