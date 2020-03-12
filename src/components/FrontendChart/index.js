@@ -1,5 +1,7 @@
 import React from 'react'
 import { ResponsiveBump } from '@nivo/bump'
+
+import { ChartContainer } from '../../containers/ChartContainer'
 import { theme } from '../../settings/charts'
 import { colors } from '../../settings/constants'
 
@@ -63,14 +65,13 @@ const CustomPoint = ({ x, y, size, borderColor, borderWidth, data, isInactive })
   )
 }
 
-export const FrontendChart = () => (
-  <article className='chart'>
-    <h3>Tecnologias Frontend</h3>
+export const FrontendChart = ({ height }) => (
+  <ChartContainer title='Tecnologias Frontend' height={height}>
     <ResponsiveBump
-      height={400}
+      height={height}
       data={data}
       pointComponent={CustomPoint}
-      margin={{ top: 20, right: 75, bottom: 100, left: 0 }}
+      margin={{ top: 20, right: 75, bottom: 25, left: 0 }}
       lineWidth={4}
       activeLineWidth={5}
       inactiveLineWidth={3}
@@ -91,5 +92,5 @@ export const FrontendChart = () => (
       colors={[colors.blueLight, colors.greenLight, colors.fuchsia, colors.coral]}
       theme={theme}
     />
-  </article>
+  </ChartContainer>
 )

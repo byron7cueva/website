@@ -19,19 +19,4 @@ export const GlobalStyle = createGlobalStyle`
   ${Titles}
   ${Buttons}
   ${Containers}
-
-  .section-container {
-    padding: 1.5em;
-  }
-
-  .flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .chart {
-    width: 100%;
-    height: 200px;
-  }
 `

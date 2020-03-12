@@ -53,7 +53,7 @@ const data = {
 export const Skills = () => (
   <SkillsSection className='container-page'>
     <h2 className='dark'>Habilidades</h2>
-    <LanguagesChart data={data.programingLanguages['2020']} />
-    <FrontendChart />
+    <LanguagesChart data={data.programingLanguages['2020']} height={150} />
+    <FrontendChart height={350} />
   </SkillsSection>
 )

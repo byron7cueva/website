@@ -1,6 +1,7 @@
 import React from 'react'
-
 import { ResponsiveBar } from '@nivo/bar'
+
+import { ChartContainer } from '../../containers/ChartContainer'
 import { theme } from '../../settings/charts'
 import { colors } from '../../settings/constants'
 
@@ -24,11 +25,10 @@ const BarComponent = props => {
   )
 }
 
-export const LanguagesChart = ({ data = [] }) => (
-  <article className='chart'>
-    <h3>Languajes y plataformas</h3>
+export const LanguagesChart = ({ data = [], height }) => (
+  <ChartContainer title='Languajes y plataformas' height={height}>
     <ResponsiveBar
-      height={150}
+      height={height}
       data={data}
       keys={['value']}
       indexBy='id'
@@ -54,5 +54,5 @@ export const LanguagesChart = ({ data = [] }) => (
       barComponent={BarComponent}
       theme={theme}
     />
-  </article>
+  </ChartContainer>
 )

@@ -6,7 +6,7 @@ export const Containers = css`
     height: 100vh;
   }
   .container-page {
-    padding: 1em 1.5em;
+    padding: 1em 1.5em 5.5em;
   }
   .container-center {
     display: block;
