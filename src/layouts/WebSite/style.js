@@ -13,57 +13,57 @@ const saturacionMask = css`
 
 export const LogoContainer = styled.div`
   position: fixed;
+  z-index: 2;
   top: 0;
   left: 0;
   width: 69px;
   height: 70px;
-  z-index: 2;
 `
 
 export const Path = ({ width = '100%', height = '100%' }) => {
   const Div = styled.div`
+    position: absolute;
     width: ${width};
     height: ${height};
-    position: absolute;
     mask-image: url(${pathLogo});
     mask-size: cover;
-    background-color: rgba(47,82,116,0.75);
+    background-color: rgba(49, 84, 124, 0.85);
     ${saturacionMask}
   `
   return <Div />
 }
 
 export const Logo = styled.div`
-  width: 40px;
-  height: 40px;
+  position: absolute;
+  z-index: 3;
   top: 10%;
   left: 5%;
+  width: 40px;
+  height: 40px;
   background-image: url(${logo});
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  position: absolute;
-  z-index: 3;
 `
 
 export const Banner = styled.div`
   position: fixed;
+  z-index: 2;
   bottom:0;
   left:0;
   width: 100%;
   height: 55px;
-  z-index: 2;
 `
 
 export const BackgroundBanner = styled.div`
-  width: 100%;
-  height: 100%;
   position: absolute;
+  z-index: 3;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
   mask-image: url(${banner});
   mask-size: cover;
-  z-index: 3;
   background: linear-gradient(30deg,rgba(29, 209, 161, 0.8) 0%,rgba(255, 255, 255, 0.4) 60%);
   ${saturacionMask}
 `
@@ -88,14 +88,14 @@ export const ContentBanner = styled.div`
 
 export const MenuButton = styled.a`
   position: fixed;
+  display: flex;
   bottom: 35px;
   right: 3%;
-  display: flex;
+  width: 3em;
+  height: 3em;
   align-items: center;
   justify-content: center;
   color: var(--color-light);
-  width: 3em;
-  height: 3em;
   background-color: var(--color-first);
   border-radius: 50%;
   box-shadow: 0px 0px 5px rgba(39, 44, 74, .5);
