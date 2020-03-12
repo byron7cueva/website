@@ -20,7 +20,7 @@ const styleClass = css`
   .opinion__writer {
     display: inline-flex;
     width: 90%;
-    margin: 1em 0;
+    margin-top: 1em;
     img {
       width: 4em;
       border-radius: 50%;
