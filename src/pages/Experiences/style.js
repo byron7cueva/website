@@ -3,11 +3,11 @@ import styled from 'styled-components'
 export const ExpereiencesSection = styled.section`
   .experience__bar {
     position: fixed;
+    z-index: 1;
     top: 0;
     left: 0;
     width: 100%;
     padding: 1em 0 0 1.5em;
-    z-index: 1;
   }
 
   .experience__bar.blur {
@@ -26,16 +26,16 @@ export const ExpereiencesSection = styled.section`
   }
 
   .experience__bar h5 span {
-    padding-left: 2.5em;
     position: relative;
+    padding-left: 2.5em;
   }
 
   .experience__bar h5 span:before {
-    content: '';
-    width: 2em;
-    top: 50%;
-    border-bottom: 0.13em solid;
     position: absolute;
+    top: 50%;
     left: 0;
+    width: 2em;
+    content: '';
+    border-bottom: 0.13em solid;
   }
 `

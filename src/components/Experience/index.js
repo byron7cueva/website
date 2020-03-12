@@ -3,8 +3,8 @@ import React from 'react'
 import { ExperienceContainer } from './style'
 
 export const Experience = ({ position, organization, description, logo, image }) => (
-  <ExperienceContainer className='experience'>
-    <h3 className='experience__position'>{position}</h3>
+  <ExperienceContainer>
+    <h4 className='experience__position'>{position}</h4>
     <div className='experience__organization'>
       <figure>
         <img src={logo} alt={organization} />

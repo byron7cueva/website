@@ -25,6 +25,7 @@ export const Defaults = css`
   }
 
   p {
+    line-height: var(--line-height-content);
     font-weight: lighter;
   }
 `

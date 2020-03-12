@@ -24,7 +24,11 @@ export class Experiences extends React.Component {
         id: 1,
         position: 'Líder Técnico',
         organization: 'Kruger Corporation',
-        description: 'Estuve a cargo del equipo de Componentes y Frameworks. Con mi equipo agilizamos y estandarizamos el desarrollo de aplicaciones web, a través de la implementación de una arquitectura mantenible y modular. También desarrollamos utilidades, componentes, módulos y frameworks para el resto de proyectos en Angular, Java y Node.js, acelerando el desarrollo de aplicaciones para el cliente Corporación Favorita. Nos apoyamos de tecnologías como: HTML5, CSS3, Bootstrap, Socket.io, Express.js, Gulp y Babel.',
+        description: `
+          <p>
+            Estuve a cargo del equipo de Componentes y Frameworks. Con mi equipo agilizamos y estandarizamos el desarrollo de aplicaciones web, a través de la implementación de una arquitectura mantenible y modular. También desarrollamos utilidades, componentes, módulos y frameworks para el resto de proyectos en Angular, Java y Node.js, acelerando el desarrollo de aplicaciones para el cliente Corporación Favorita. Nos apoyamos de tecnologías como: HTML5, CSS3, Bootstrap, Socket.io, Express.js, Gulp y Babel.
+          </p>
+        `,
         logo: logoKruger,
         initDate: '10/2015',
         finishDate: '12/2017',
@@ -34,7 +38,11 @@ export class Experiences extends React.Component {
         id: 2,
         position: 'Desarrollador de Software',
         organization: 'Kruger Corporation',
-        description: 'Trabaje en el desarrollo de aplicaciones y módulos para el cliente Corporación Favorita. Utilicé tecnologías: Java, JSF, RichFaces, JPA, Hibernate y Spring Framework.',
+        description: `
+          <p>
+            Trabaje en el desarrollo de aplicaciones y módulos para el cliente Corporación Favorita. Utilicé tecnologías: Java, JSF, RichFaces, JPA, Hibernate y Spring Framework.
+          </p>
+        `,
         logo: logoKruger,
         initDate: '10/2014',
         finishDate: '10/2015',
@@ -44,15 +52,19 @@ export class Experiences extends React.Component {
         id: 3,
         position: 'Desarrollador de Software',
         organization: 'Kruger Corporation',
-        description: `Mejore la experiencia de uso de la información catastral de la ciudad de Ibarra y que sea más accesible, mediante la implementación de una nueva arquitectura para aplicaciones SIG, la migración de información a un entorno relacional a través de Postgresql - PostGIS y el desarrollo de algunos Sistemas de Información Geográfica Web, como: 
-        <ul>
-          <li>SIG GAD Ibarra</li>
-          <li>Plan de Ordenamiento Territorial (PDOT)</li>
-          <li>Publicidad exterior</li>
-          <li>SIG Centro histórico</li>
-          <li>SIG Censo PDOT</li>
-          <li>SIG Temáticos Catastro.</li>
-        </ul>`,
+        description: `
+          <p>
+            Mejore la experiencia de uso de la información catastral de la ciudad de Ibarra y que sea más accesible, mediante la implementación de una nueva arquitectura para aplicaciones SIG, la migración de información a un entorno relacional a través de Postgresql - PostGIS y el desarrollo de algunos Sistemas de Información Geográfica Web, como: 
+            <ul>
+              <li>SIG GAD Ibarra</li>
+              <li>Plan de Ordenamiento Territorial (PDOT)</li>
+              <li>Publicidad exterior</li>
+              <li>SIG Centro histórico</li>
+              <li>SIG Censo PDOT</li>
+              <li>SIG Temáticos Catastro.</li>
+            </ul>
+          </p>
+        `,
         logo: logoKruger,
         initDate: '05/2011',
         finishDate: '04/2014',
@@ -111,7 +123,7 @@ export class Experiences extends React.Component {
 
   render () {
     return (
-      <ExpereiencesSection className='section-container'>
+      <ExpereiencesSection className='container-page'>
         <div className={`experience__bar ${this.state.blur ? 'blur' : ''}`} ref={this.barRef}>
           <h2>Experiencia</h2>
           <h5>

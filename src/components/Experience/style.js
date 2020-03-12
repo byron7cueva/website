@@ -1,16 +1,16 @@
 import styled from 'styled-components'
 
 export const ExperienceContainer = styled.article`
-  margin: 5.5em 0 1.5em;
   display: grid;
+  margin: 6em 0 2em;
   grid-template-columns: 1fr 1fr;
   row-gap: 0.5em;
   .experience__position {
     grid-column: 1 / 2;
   }
   .experience__organization {
-    grid-column: 2 / 3;
     display: flex;
+    grid-column: 2 / 3;
     flex-direction: column;
     justify-content: center;
     border-left: 1px solid var(--color-gray-2);
@@ -28,6 +28,5 @@ export const ExperienceContainer = styled.article`
 
   .expereience__description {
     grid-column: 1 / 3;
-    line-height: 2em;
   }
 `
