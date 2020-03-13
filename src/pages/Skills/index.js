@@ -103,8 +103,8 @@ const data = {
 export const Skills = () => (
   <SkillsSection className='container-page'>
     <h2 className='dark'>Habilidades</h2>
-    <DataTecnologyChart data={data.dataTecnology} height={250} width={450} />
     <LanguagesChart data={data.programingLanguages['2020']} height={180} />
     <FrontendChart data={data.frontend} height={350} width={700} />
+    <DataTecnologyChart data={data.dataTecnology} height={250} width={400} />
   </SkillsSection>
 )

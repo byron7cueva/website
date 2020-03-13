@@ -10,9 +10,10 @@ const BarComponent = props => {
     <g transform={`translate(${props.x},${props.y})`}>
       <rect width={props.width} height={props.height} fill={props.color} />
       <text
-        x={props.width / 2}
-        y={props.height / 2}
-        textAnchor='middle'
+        x={-60}
+        y={props.width / 2}
+        textAnchor='end'
+        transform='rotate(270)'
         dominantBaseline='central'
         fill={colors.light}
         style={{

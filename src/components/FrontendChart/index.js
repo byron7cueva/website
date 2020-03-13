@@ -22,6 +22,14 @@ const CustomPoint = ({ x, y, size, borderColor, borderWidth, data, isInactive })
   )
 }
 
+const format = d => {
+  switch (d) {
+    case 1: return 'Principal'
+    case 4: return 'Sin uso'
+    default: return d
+  }
+}
+
 export const FrontendChart = ({ data, height, width }) => (
   <ChartContainer title='Tecnologias Frontend' height={height} width={width}>
     <ResponsiveBump
@@ -40,13 +48,7 @@ export const FrontendChart = ({ data, height, width }) => (
         legend: 'Prioridad de uso',
         legendPosition: 'middle',
         legendOffset: -140,
-        format: d => {
-          switch (d) {
-            case 1: return 'Principal'
-            case 4: return 'Sin uso'
-            default: return d
-          }
-        }
+        format: format
       }}
       axisRight={{
         tickSize: 80,
@@ -54,13 +56,7 @@ export const FrontendChart = ({ data, height, width }) => (
         legend: 'Prioridad de uso',
         legendPosition: 'middle',
         legendOffset: 140,
-        format: d => {
-          switch (d) {
-            case 1: return 'Principal'
-            case 4: return 'Sin uso'
-            default: return d
-          }
-        }
+        format: format
       }}
       startLabelPadding={10}
       endLabelPadding={10}
