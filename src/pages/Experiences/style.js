@@ -1,9 +1,11 @@
 import styled from 'styled-components'
 
+import { zIndex } from '../../settings/constants'
+
 export const ExpereiencesSection = styled.section`
   .experience__bar {
     position: fixed;
-    z-index: 1;
+    z-index: ${zIndex.bar};
     top: 0;
     left: 0;
     width: 100%;

@@ -6,7 +6,7 @@ export const fonts = {
 }
 
 export const colors = {
-  first: '#1e85e6',
+  first: '#1B79D1',
   second: '#1dd1a1',
   alternative: '#11bbd1',
   light: '#fdfdfb',
@@ -34,4 +34,11 @@ export const size = {
   icon: '1.6em',
   iconBtn: '2em',
   lineHeightContent: '2em'
+}
+
+export const zIndex = {
+  bar: 1,
+  logo: 2,
+  menu: 3,
+  buttonMenu: 4
 }

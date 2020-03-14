@@ -1,6 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 
+import { zIndex } from '../../settings/constants'
 import pathLogo from '../../assets/img/all/pathLogo.svg'
 import logo from '../../assets/img/all/logo.svg'
 import banner from '../../assets/img/all/banner.svg'
@@ -13,7 +14,7 @@ const saturacionMask = css`
 
 export const LogoContainer = styled.div`
   position: fixed;
-  z-index: 2;
+  z-index: ${zIndex.logo};
   top: 0;
   left: 0;
   width: 69px;
@@ -35,7 +36,6 @@ export const Path = ({ width = '100%', height = '100%' }) => {
 
 export const Logo = styled.div`
   position: absolute;
-  z-index: 3;
   top: 10%;
   left: 5%;
   width: 40px;
@@ -48,7 +48,6 @@ export const Logo = styled.div`
 
 export const Banner = styled.div`
   position: fixed;
-  z-index: 2;
   bottom:0;
   left:0;
   width: 100%;
@@ -57,7 +56,7 @@ export const Banner = styled.div`
 
 export const BackgroundBanner = styled.div`
   position: absolute;
-  z-index: 3;
+  z-index: ${zIndex.bar};
   top: 0;
   left: 0;
   width: 100%;
@@ -70,7 +69,7 @@ export const BackgroundBanner = styled.div`
 
 export const ContentBanner = styled.div`
   position: absolute;
-  z-index: 4;
+  z-index: ${zIndex.bar + 1};
   padding: 0.5em;
   p {
     margin: 0;
@@ -85,19 +84,4 @@ export const ContentBanner = styled.div`
     color: var(--color-dark);
     padding-right: 0.5em;
   }
-`
-
-export const MenuButton = styled.a`
-  position: fixed;
-  display: flex;
-  bottom: 35px;
-  right: 3%;
-  width: 3em;
-  height: 3em;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-light);
-  background-color: var(--color-first);
-  border-radius: 50%;
-  box-shadow: 0px 0px 5px rgba(39, 44, 74, .5);
 `

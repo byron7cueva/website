@@ -1,11 +1,5 @@
 import { css } from 'styled-components'
 
-const buttonBase = css`
-  border: none;
-  cursor: pointer;
-  outline: none;
-`
-
 /**
  * Styles for Buttons
  */
@@ -14,8 +8,13 @@ export const Buttons = css`
     -webkit-tap-highlight-color: transparent;
   }
 
+  button {
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+
   .btn-icon {
-    ${buttonBase}
     margin: 1em 0;
     color: var(--color-gray-2);
     background: transparent;
@@ -25,7 +24,6 @@ export const Buttons = css`
   }
 
   .btn {
-    ${buttonBase}
     padding: 1em 2em;
     transition-property: background;
     transition-duration: 0.2;
