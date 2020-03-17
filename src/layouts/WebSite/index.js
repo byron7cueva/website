@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 
 import { GlobalStyle } from '../../styles/GlobalStyle'
-import { LogoContainer, Path, Logo, Banner, BackgroundBanner, ContentBanner } from './style'
+import { LogoSection } from '../../components/LogoSection'
 import { Menu } from '../../components/Menu'
 import { MenuButton } from '../../components/MenuButton'
+import { Footer } from '../../components/Footer'
 
 /**
  * WebSite layout
@@ -15,27 +16,13 @@ export const WebSite = ({ children }) => {
   return (
     <>
       <GlobalStyle />
-      <LogoContainer>
-        <Path />
-        <Path width='95%' height='95%' />
-        <Logo />
-      </LogoContainer>
+      <LogoSection />
       <main>
         {children}
       </main>
       <Menu isShow={showMenu} />
       <MenuButton isClicked={showMenu} onClick={() => { setShowMenu(!showMenu) }} />
-      <Banner>
-        <BackgroundBanner />
-        <ContentBanner>
-          <p>2020 - Byron Cueva</p>
-          <p className='icons'>
-            <a href='https://www.linkedin.com/in/byron7cueva/' className='icon-linkedin' target='noopener noreferrer' />
-            <a href='https://github.com/byron7cueva' className='icon-github' target='noopener noreferrer' />
-            <a href='https://twitter.com/byron7cueva' className='icon-twitter' target='noopener noreferrer' />
-          </p>
-        </ContentBanner>
-      </Banner>
+      <Footer />
     </>
   )
 }

@@ -8,7 +8,7 @@ export const Defaults = css`
     box-sizing: border-box;
   }
 
-  html, body, section, figure, article, p, h2, h4, h5, h6 {
+  html, body, section, figure, article, footer, p, h2, h4, h5, h6 {
     padding: 0;
     margin: 0;
   }
