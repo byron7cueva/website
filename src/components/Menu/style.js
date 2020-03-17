@@ -11,8 +11,9 @@ export const Nav = styled.nav`
   height: 75vh;
   opacity: 0;
   transition-property: right, opacity;
-  transition-duration: 0.5s, .2s;
+  transition-duration: 0.5s, 0.6s;
   transition-timing-function: ease-out;
+  box-shadow: 0px 0px 5px rgba(39, 44, 74, .5);
 
   .menu__mask {    
     position: absolute;
@@ -20,8 +21,9 @@ export const Nav = styled.nav`
     left: 0;
     width: 100%;
     height: inherit;
-    background: rgba(255, 255, 255, 0.72);
+    background: linear-gradient(230deg,rgba(29, 209, 161, 0.8) 0%,rgba(255, 255, 255, 0.4) 60%);
     backdrop-filter: saturate(180%) blur(20px);
+    /* background: rgba(255, 255, 255, 0.72); */
   }
 
   .menu__content {

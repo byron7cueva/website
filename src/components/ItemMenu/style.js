@@ -6,7 +6,7 @@ export const Li = styled.li`
   position: relative;
 
   a {
-    color: ${colors.grayDark};
+    color: ${colors.dark};
     font-family: ${fonts.title};
     text-transform: uppercase;
     font-size: 1.5em;
