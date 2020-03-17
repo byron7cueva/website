@@ -3,7 +3,7 @@ import { Link, useRouteMatch } from 'react-router-dom'
 
 import { Li } from './style'
 
-export const ItemMenu = ({ label, to }) => {
+export const ItemMenu = ({ label, to, onClick }) => {
   const match = useRouteMatch({
     path: to,
     exact: true
@@ -11,7 +11,7 @@ export const ItemMenu = ({ label, to }) => {
   return (
     <Li className={match ? 'active' : ''}>
       <div />
-      <Link to={to}>{label}</Link>
+      <Link to={to} onClick={onClick}>{label}</Link>
     </Li>
   )
 }

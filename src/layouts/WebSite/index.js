@@ -13,6 +13,11 @@ import { Footer } from '../../components/Footer'
  */
 export const WebSite = ({ children }) => {
   const [showMenu, setShowMenu] = useState(false)
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu)
+  }
+
   return (
     <>
       <GlobalStyle />
@@ -20,8 +25,8 @@ export const WebSite = ({ children }) => {
       <main>
         {children}
       </main>
-      <Menu isShow={showMenu} />
-      <MenuButton isClicked={showMenu} onClick={() => { setShowMenu(!showMenu) }} />
+      <Menu isShow={showMenu} onClickItem={toggleMenu} />
+      <MenuButton isClicked={showMenu} onClick={toggleMenu} />
       <Footer />
     </>
   )
