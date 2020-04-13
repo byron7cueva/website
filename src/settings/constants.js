@@ -42,3 +42,10 @@ export const zIndex = {
   menu: 3,
   buttonMenu: 4
 }
+
+export const devices = {
+  mobile: '(min-width: 320px)',
+  phablet: '(min-width: 480px)',
+  tablet: '(min-width: 768px)',
+  laptop: '(min-width: 1024px)'
+}

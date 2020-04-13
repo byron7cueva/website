@@ -1,6 +1,6 @@
 import { css } from 'styled-components'
 
-import { fonts, colors, size } from '../../settings/constants'
+import { fonts, colors, size, devices } from '../../settings/constants'
 
 /**
  * Variables for style default
@@ -36,5 +36,11 @@ export const Variables = css`
 
     /* Text */
     --line-height-content: ${size.lineHeightContent};
+  }
+
+  @media ${devices.phablet} {
+    :root {
+      --font-content-size: 16px;
+    }
   }
 `

@@ -22,7 +22,7 @@ export const WebSite = ({ children }) => {
     <>
       <GlobalStyle />
       <LogoSection />
-      <main>
+      <main onClick={toggleMenu}>
         {children}
       </main>
       <Menu isShow={showMenu} onClickItem={toggleMenu} />
