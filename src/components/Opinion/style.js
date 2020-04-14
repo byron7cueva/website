@@ -1,6 +1,11 @@
 import styled, { css } from 'styled-components'
 
 const styleClass = css`
+  button {
+    display: block;
+    margin: 0 auto;
+  }
+
   .opinion__message {
     min-height: 13em;
     margin-bottom: 1em;

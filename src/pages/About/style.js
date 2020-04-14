@@ -5,6 +5,13 @@ import { devices } from '../../settings/constants'
 
 export const AboutSection = styled.section`
   overflow: hidden;
+
+  @media ${devices.phablet} {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100vh - 4em);
+  }
 `
 
 export const AboutContent = styled.section`

@@ -2,7 +2,8 @@ import styled from 'styled-components'
 
 export const ExperienceContainer = styled.article`
   display: grid;
-  margin: 6em 0 2em;
+  /* margin: 6em 0 2em; */
+  margin: 6em 0 16vh;
   grid-template-columns: 1fr 1fr;
   row-gap: 0.5em;
   .experience__position {

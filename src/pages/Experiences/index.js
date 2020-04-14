@@ -90,7 +90,7 @@ export class Experiences extends React.Component {
           this.elementObserver = entries[0].target
         }
       }, {
-        threshold: [0.35, 0.75]
+        threshold: [0]
       })
 
       this.children.forEach(element => {

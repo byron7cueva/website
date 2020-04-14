@@ -17,7 +17,7 @@ export const App = () => (
   <BrowserRouter>
     <WebSite>
       <Switch>
-        <Route path='/' exact component={About} />
+        <Route path='/' exact component={Experiences} />
         <Route path='/about' exact component={About} />
         <Route path='/opinions' exact component={Opinions} />
         <Route path='/experience' exact component={Experiences} />
